@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRO Weekly Prospects · 26 June 2026 · Purely Personal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#E8294C; --primary-light:#F5607A;
+    --black:#0A0A0A; --ink:#15151A; --white:#FFFFFF; --off-white:#F8F7F5;
+    --gray:#E4E3E0; --gray-text:#5b5b62; --gray-light:#F2F1EE;
+    --good:#16A34A; --warn:#D97706; --bad:#DC2626;
+    --r-md:14px; --r-lg:22px; --pill:9999px;
+    --sh:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06);
+    --grad:linear-gradient(135deg, color-mix(in srgb,var(--primary) 78%, #000) 0%, var(--primary) 48%, var(--primary-light) 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Rethink Sans',sans-serif;background:radial-gradient(80% 60% at 96% -12%, color-mix(in srgb,var(--primary) 14%, transparent), transparent 60%), radial-gradient(60% 50% at 0% 6%, color-mix(in srgb,var(--primary-light) 10%, transparent), transparent 55%), var(--off-white);background-attachment:fixed;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .doc{max-width:900px;margin:0 auto;padding:34px 22px 70px;}
+
+  .ohead{border-radius:var(--r-md);padding:26px 28px;margin-bottom:22px;color:#fff;background:var(--grad);box-shadow:0 16px 42px color-mix(in srgb,var(--primary) 30%, transparent);position:relative;overflow:hidden;}
+  .ohead::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.10);top:-120px;right:-60px;pointer-events:none;}
+  .ohead .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.82;font-weight:600;}
+  .ohead h1{font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-.02em;margin:5px 0 3px;}
+  .ohead .d{font-size:13px;opacity:.85;}
+
+  .sec{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-text);font-weight:700;margin:24px 0 12px;}
+  .card{background:#fff;border:1px solid var(--gray);border-radius:var(--r-md);box-shadow:var(--sh);padding:18px 20px;margin-bottom:14px;border-left:4px solid var(--primary);}
+  .card h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-text);margin-bottom:10px;}
+  .row{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px;border-bottom:1px solid var(--gray-light);}
+  .row:last-child{border-bottom:none;}
+  .tagi{font-size:11px;font-weight:700;padding:2px 9px;border-radius:var(--pill);margin-left:auto;white-space:nowrap;flex-shrink:0;}
+  .t-red{background:#fdecec;color:var(--bad);}
+  .t-grn{background:#e7f6ee;color:var(--good);}
+  .t-grey{background:var(--gray-light);color:var(--gray-text);}
+  .t-amb{background:#fdf1de;color:var(--warn);}
+  .t-blue{background:#e6f0fc;color:#1E6FE0;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .stat{background:#fff;border:1px solid var(--gray);border-radius:var(--r-md);box-shadow:var(--sh);padding:18px 20px;position:relative;overflow:hidden;}
+  .stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);}
+  .stat .l{font-size:12px;color:var(--gray-text);}
+  .stat .n{font-size:34px;font-weight:800;letter-spacing:-.02em;margin-top:4px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .note{background:linear-gradient(135deg, var(--ink) 0%, color-mix(in srgb,var(--primary) 26%, var(--ink)) 100%);color:#fff;border-radius:var(--r-md);padding:18px 22px;font-size:15px;margin-top:6px;box-shadow:0 14px 36px rgba(0,0,0,.16);}
+  .note b{color:var(--primary-light);}
+
+  /* Prospect cards */
+  .pcard{background:#fff;border:1px solid var(--gray);border-radius:var(--r-md);box-shadow:var(--sh);padding:18px 20px;margin-bottom:14px;}
+  .pcard.hot{border-left:4px solid var(--good);}
+  .pcard.warm{border-left:4px solid var(--warn);}
+  .pcard.cold{border-left:4px solid var(--gray-text);}
+  .ph{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;}
+  .av-sm{width:38px;height:38px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0;}
+  .ph-info .nm{font-weight:700;font-size:15px;line-height:1.2;}
+  .ph-info .rl{font-size:12px;color:var(--gray-text);margin-top:2px;}
+  .ph-info .loc{font-size:11px;color:var(--gray-text);margin-top:1px;}
+  .signal{font-size:13px;color:var(--gray-text);margin-bottom:10px;padding:8px 10px;background:var(--gray-light);border-radius:8px;}
+  .hook{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-bottom:6px;margin-top:12px;}
+  .hook-text{font-size:14px;font-style:italic;color:var(--ink);margin-bottom:12px;}
+
+  .seq-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-text);margin:10px 0 4px;}
+  .dm-box{background:var(--gray-light);border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.65;color:var(--ink);margin-bottom:6px;position:relative;}
+  .dm-num{font-size:10px;font-weight:700;color:var(--primary);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px;}
+  .dm-tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:var(--pill);float:right;margin-top:-2px;}
+  .dm-tag.cr{background:#e6f0fc;color:#1E6FE0;}
+  .dm-tag.ib{background:#e7f6ee;color:var(--good);}
+  .dm-tag.va{background:#fdf1de;color:var(--warn);}
+  .dm-tag.pv{background:#fdecec;color:var(--bad);}
+  .dm-tag.ce{background:var(--gray-light);color:var(--gray-text);border:1px solid var(--gray);}
+
+  .score-row{display:flex;align-items:center;gap:8px;font-size:13px;margin-top:10px;flex-wrap:wrap;}
+  .score-pill{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:var(--pill);font-size:11px;font-weight:700;}
+  .sp-fit{background:#e7f6ee;color:var(--good);}
+  .sp-warm{background:#fdf1de;color:var(--warn);}
+  .sp-hot{background:#e7f6ee;color:var(--good);}
+  .sp-cold{background:var(--gray-light);color:var(--gray-text);}
+  .sp-style{background:#e6f0fc;color:#1E6FE0;}
+  .sp-angle{background:#fdecec;color:var(--bad);}
+  .sp-partner{background:color-mix(in srgb,var(--primary) 12%,#fff);color:var(--primary);}
+
+  .draft-notice{font-size:12px;color:var(--gray-text);font-style:italic;margin-top:8px;}
+  footer{text-align:center;padding:30px 22px 10px;color:var(--gray-text);font-size:13px;}
+  footer b{color:var(--ink);}
+  @media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-theme="standard">
+<div class="doc">
+
+  <div class="ohead">
+    <div class="k">CRO · Weekly prospect pack</div>
+    <h1>10 matched. 2 hot.</h1>
+    <div class="d">Sourced from LinkedIn · NZ and Queenstown · DMs drafted, nothing sent</div>
+  </div>
+
+  <div class="grid3">
+    <div class="stat"><div class="l">Prospects found</div><div class="n"><span class="count" data-to="10">0</span></div></div>
+    <div class="stat"><div class="l">Hot</div><div class="n" style="color:var(--good)"><span class="count" data-to="2">0</span></div></div>
+    <div class="stat"><div class="l">DMs drafted</div><div class="n"><span class="count" data-to="10">0</span></div></div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <h4>Search methodology</h4>
+    <div class="row">Keywords: paragliding, adventure sports, outdoor instructor · Location: New Zealand<span class="tagi t-grey">search 1</span></div>
+    <div class="row">Keywords: adventure, outdoor, aerial sports · Location: Queenstown, Otago<span class="tagi t-grey">search 2</span></div>
+    <div class="row">Mix of student prospects and strategic referral / partnership leads<span class="tagi t-blue">note</span></div>
+  </div>
+
+  <!-- ===================== PROSPECT 1 ===================== -->
+  <div class="sec">Hot prospects · open first</div>
+
+  <div class="pcard hot">
+    <div class="ph">
+      <div class="av-sm">DG</div>
+      <div class="ph-info">
+        <div class="nm">Dave Greenberg CSP</div>
+        <div class="rl">Executive Crisis Simulation Specialist · Speaker</div>
+        <div class="loc">Wellington, New Zealand</div>
+      </div>
+      <span class="tagi t-grn" style="margin-left:auto">hot</span>
+    </div>
+    <div class="signal">Signal: 25 years in high-consequence decision-making environments. 4,000 real-world missions. His work is explicitly about "demonstrated performance under pressure" vs "assumed readiness." The go/no-go framework Chris teaches is the same logic, different domain. Posted recently on LinkedIn.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 8/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Driver</span>
+      <span class="score-pill sp-angle">Angle: Student + Peer</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"Your crisis work and paragliding instruction land in the same place: the gap between what someone thinks they'll do and what they actually do when consequence is real."</div>
+
+    <div class="seq-label">Message 1 · Connection request (300 chars max)</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Dave, your distinction between assumed readiness and demonstrated performance is exactly how I think about pilot training. I teach paragliding and the go/no-go decision framework maps almost directly onto crisis leadership. Would be good to connect.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker (send after accepted)</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      The phrase "assumed readiness is common, demonstrated performance is rare" stopped me. I use different words but the same idea with every student I put on a launch site. We call it extreme ownership over the go/no-go call. They always think they're ready until they're actually standing in the wind. How do you find executives respond when the simulation reveals the gap?
+    </div>
+
+    <div class="seq-label">Message 3 · Value-add (day 3 if no reply)</div>
+    <div class="dm-box">
+      <div class="dm-num">Value-add <span class="dm-tag va">day 3</span></div>
+      Thinking more about your diagnostic approach. In aviation we use a simple test: real conditions, real stakes, no safety net of a plan. The gap between expected decision and actual decision is always revealing. One thing I notice: people who do well in simulations sometimes freeze in real conditions because the emotional weight is different. Do you build that into how you debrief after a simulation?
+    </div>
+
+    <div class="seq-label">Message 4 · The Pivot (day 6 if no reply)</div>
+    <div class="dm-box">
+      <div class="dm-num">Pivot <span class="dm-tag pv">day 6</span></div>
+      Different angle: I run a paragliding school in Queenstown. We get people who are comfortable with risk in their professional life, then freeze on the launch site. The embodied version is different from the conceptual one. Have you ever thought about using a genuine high-stakes physical environment to test executive decision-making?
+    </div>
+
+    <div class="seq-label">Message 5 · Clean exit (day 11 if no reply)</div>
+    <div class="dm-box">
+      <div class="dm-num">Clean exit <span class="dm-tag ce">day 11</span></div>
+      Chris here. I'll leave it at this. We've been circling the same territory around decision-making under real pressure. If you ever want to compare notes, or come up the hill in Queenstown, the door is open.
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- ===================== PROSPECT 2 ===================== -->
+  <div class="pcard hot">
+    <div class="ph">
+      <div class="av-sm">LS</div>
+      <div class="ph-info">
+        <div class="nm">Lee Saunders</div>
+        <div class="rl">Owner · Alpine Luxury Tours</div>
+        <div class="loc">Queenstown, Otago, New Zealand</div>
+      </div>
+      <span class="tagi t-grn" style="margin-left:auto">hot</span>
+    </div>
+    <div class="signal">Signal: Already operating premium bespoke experiences in Queenstown including heli-tours and private ski. Based in Queenstown. Best luxury tours NZ 2022 and 2023. Direct referral or partnership opportunity. Clients already spending at the top end.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 8/10</span>
+      <span class="score-pill sp-hot">Temp: Hot</span>
+      <span class="score-pill sp-style">Style: Expressive</span>
+      <span class="score-pill sp-partner">Angle: Partnership / Referral</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"You sell heli-tours. Paragliding is what the serious ones come back for the second time."</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Lee, fellow Queenstown operator. I run Infinity Paragliding out of Otago, the only paragliding school in the region. Your bespoke approach to the premium experience market caught my eye. Worth connecting.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      The focus on private and tailored over packaged is exactly right for this market. In 13 years of teaching here I've noticed that the clients who want the real thing aren't interested in the tourist version. Do your clients ever ask specifically about paragliding, or does the aerial conversation usually stay at heli level?
+    </div>
+
+    <div class="seq-label">Message 3 · Value-add</div>
+    <div class="dm-box">
+      <div class="dm-num">Value-add <span class="dm-tag va">day 3</span></div>
+      Something I've seen with high-end visitors: a heli-tour gives them the view from above. Paragliding gives them the sensation of actually being in the air, independently. They're different experiences and they scratch completely different itches. International clients who do both often say the heli gave them the scale, the paragliding gave them the feeling. Worth knowing if you're building a full aerial day for someone.
+    </div>
+
+    <div class="seq-label">Message 4 · The Pivot</div>
+    <div class="dm-box">
+      <div class="dm-num">Pivot <span class="dm-tag pv">day 6</span></div>
+      I'll be direct: I'm always looking for quality Queenstown operators to work alongside. If you have clients asking about paragliding, I'd rather they go somewhere that holds a real standard. Is there a conversation worth having about how we might work together?
+    </div>
+
+    <div class="seq-label">Message 5 · Clean exit</div>
+    <div class="dm-box">
+      <div class="dm-num">Clean exit <span class="dm-tag ce">day 11</span></div>
+      Lee, I'll leave it there. Chris Connolly, Infinity Paragliding. If you ever have a client asking about paragliding or want to understand what we offer, easy to reach at info@infinityparagliding.co.nz.
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- ===================== WARM PROSPECTS ===================== -->
+  <div class="sec">Warm prospects</div>
+
+  <!-- PROSPECT 3 -->
+  <div class="pcard warm">
+    <div class="ph">
+      <div class="av-sm">RT</div>
+      <div class="ph-info">
+        <div class="nm">Richard Thomas</div>
+        <div class="rl">Chairman · Destination Queenstown / Director · Skyline Enterprises</div>
+        <div class="loc">New Zealand</div>
+      </div>
+      <span class="tagi t-amb" style="margin-left:auto">warm</span>
+    </div>
+    <div class="signal">Signal: Chairman of Destination Queenstown and Director of Skyline Enterprises. Former publisher Mountain Scene. Deep Queenstown governance network. Director of Snow Sports NZ. If paragliding is going to get more visibility in Queenstown's tourism narrative, Richard is one of the right conversations.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 9/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Analytical</span>
+      <span class="score-pill sp-partner">Angle: Strategic Partnership</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"Queenstown has gondola, bungee, heli-ski. Paragliding is the only aerial experience that sends visitors home with a skill they can repeat."</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Richard, I run Infinity Paragliding in Otago, the only IPPI-standard school in the region. Given your work with Destination Queenstown, worth connecting with another operator focused on the authentic end of the experience market.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      From your vantage point at Destination Queenstown, do you see a gap in what the region offers internationally? Queenstown has the thrill market covered. What I've noticed is the skill-transfer experience is less well represented. Visitors who leave with something they can take home and do again are a different category of advocate. Is that a conversation the destination marketing community is having?
+    </div>
+
+    <div class="seq-label">Message 3 · Value-add</div>
+    <div class="dm-box">
+      <div class="dm-num">Value-add <span class="dm-tag va">day 3</span></div>
+      What distinguishes Queenstown's top experiences is they each create a specific kind of memory. Gondola is panorama. Bungee is threshold. Jet boat is speed. Paragliding is the only one that builds a capability. The people who do it properly become pilots. They come back. Is longevity of visitor relationship something that comes up in Destination Queenstown's strategic thinking?
+    </div>
+
+    <div class="seq-label">Message 4 · The Pivot</div>
+    <div class="dm-box">
+      <div class="dm-num">Pivot <span class="dm-tag pv">day 6</span></div>
+      Direct question: Infinity Paragliding trains to international IPPI standard, which is the same licence recognised in Europe, Asia, and North America. For an internationally connected visitor profile, that matters. Is there a conversation worth having about how we fit within Queenstown's adventure tourism offer?
+    </div>
+
+    <div class="seq-label">Message 5 · Clean exit</div>
+    <div class="dm-box">
+      <div class="dm-num">Clean exit <span class="dm-tag ce">day 11</span></div>
+      I'll leave it there. Chris Connolly, Infinity Paragliding. If the conversation ever becomes relevant from a Destination Queenstown or Skyline perspective, I'm easy to find.
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- PROSPECT 4 -->
+  <div class="pcard warm">
+    <div class="ph">
+      <div class="av-sm">JT</div>
+      <div class="ph-info">
+        <div class="nm">James Thomas</div>
+        <div class="rl">Senior Leader · Attractions and Guest Experiences</div>
+        <div class="loc">Queenstown, Otago, New Zealand</div>
+      </div>
+      <span class="tagi t-amb" style="margin-left:auto">warm</span>
+    </div>
+    <div class="signal">Signal: Based in Queenstown. Has built world-class guest experiences across multiple continents. Works at the intersection of commercial performance and genuine experience quality. Likely values authentic over packaged. Living in Queenstown means he's surrounded by the activity but may not have done the real thing.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 7/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Expressive</span>
+      <span class="score-pill sp-angle">Angle: Student / Local</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"You've built guest experiences across continents. Living in Queenstown, have you actually done the paragliding yet?"</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      James, fellow Queenstown person. Your background building experiences that work across cultures is interesting. I run Infinity Paragliding, the paragliding school in Otago. Worth connecting.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      You've designed experiences that people remember across three continents and you're based in one of the world's best adventure destinations. Simple question: have you done the paragliding yet, or is it still on the list?
+    </div>
+
+    <div class="seq-label">Messages 3 to 5</div>
+    <div class="dm-box" style="color:var(--gray-text);font-size:13px;">
+      3. Value-add (day 3): "Something I've observed in 13 years teaching here: people who build experiences professionally notice something different when they fly. They recognise immediately what makes it work and what doesn't. What's the most genuinely memorable experience you've had personally in Queenstown?"<br><br>
+      4. Pivot (day 6): "I'll be direct. We run small groups, hold an international IPPI standard, and we're the only school in Otago. If you ever wanted to see what a properly run paragliding operation looks like from the inside, I'm open to that conversation."<br><br>
+      5. Clean exit (day 11): "I'll leave it there, James. If you ever want to come up the hill, just say the word. Chris, Infinity Paragliding."
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- PROSPECT 5 -->
+  <div class="pcard warm">
+    <div class="ph">
+      <div class="av-sm">LS</div>
+      <div class="ph-info">
+        <div class="nm">Leo S.</div>
+        <div class="rl">Head of Customers · Biophive (formerly: adventure sports operations, China)</div>
+        <div class="loc">Feilding, Manawatu-Whanganui, New Zealand</div>
+      </div>
+      <span class="tagi t-amb" style="margin-left:auto">warm</span>
+    </div>
+    <div class="signal">Signal: Set up two tandem skydiving drop zones in China from scratch. Built an adventure sports online booking platform. Has aviation and aerospace background. Returned to NZ recently. Someone who has operated at the sharp end of adventure sports knows exactly what a high standard looks like.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 7/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Driver</span>
+      <span class="score-pill sp-angle">Angle: Student + Peer</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"You set up skydiving drop zones in China. You know what building a real operation looks like. Paragliding is next."</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Leo, setting up skydiving operations from scratch in China is a very different challenge from running an existing one. I run Infinity Paragliding in Otago. Your background in adventure sports operations is interesting. Worth connecting.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      Building two tandem skydiving drop zones in China would have required working through every standard from scratch. What surprised you most about the Chinese adventure sports market when you were setting that up?
+    </div>
+
+    <div class="seq-label">Messages 3 to 5</div>
+    <div class="dm-box" style="color:var(--gray-text);font-size:13px;">
+      3. Value-add (day 3): "Now that you're back in NZ, are you staying connected to the adventure sports world? The paragliding and skydiving communities overlap more than you'd think."<br><br>
+      4. Pivot (day 6): "Different angle: have you ever flown a paraglider? Given your skydiving background and the fact that you're back in NZ, Queenstown is within range. It would take you about two days to know if it's something you'd want to continue."<br><br>
+      5. Clean exit (day 11): "I'll leave it here. Chris Connolly, Infinity Paragliding. If you ever make it down to Otago and want to see what proper flight training looks like, I'm easy to find."
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- PROSPECT 6 -->
+  <div class="pcard warm">
+    <div class="ph">
+      <div class="av-sm">NH</div>
+      <div class="ph-info">
+        <div class="nm">Nir Har-Paz</div>
+        <div class="rl">Founder · NHP Nurturing Human Performance</div>
+        <div class="loc">Paraparaumu, Wellington, New Zealand</div>
+      </div>
+      <span class="tagi t-amb" style="margin-left:auto">warm</span>
+    </div>
+    <div class="signal">Signal: Works in resilience, sustainable high performance, and experiential team development. Recently posted. His framing of "when people feel better, they perform better" and experiential workshops maps directly onto what paragliding training produces. Could be a personal student or a referral source for his own clients.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 6/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Amiable</span>
+      <span class="score-pill sp-angle">Angle: Student + Referral</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"Your experiential workshops build resilience. Paragliding training is the most direct version of that I know."</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Nir, your work on sustainable high performance through experiential development is interesting. I teach paragliding in Queenstown and the psychology of real-consequence decision-making is central to the training. Worth connecting.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      Your point about moving beyond wellness checkboxes toward genuine resilience resonates. In paragliding training, sustainable performance means making sound go/no-go decisions under pressure, not just when conditions are easy. Do you work with people who take on genuinely high-stakes physical challenges as part of building that capability?
+    </div>
+
+    <div class="seq-label">Messages 3 to 5</div>
+    <div class="dm-box" style="color:var(--gray-text);font-size:13px;">
+      3. Value-add (day 3): "One thing I've found in 13 years of teaching: the people who develop the best judgement are the ones who learn to sit with uncertainty and make a clear call anyway. The physical context strips out a lot of the rationalisation. Do you find your workshop participants struggle with that when the stakes feel real?"<br><br>
+      4. Pivot (day 6): "Completely different angle: have you ever flown a paraglider personally? Given what you do professionally, the training process itself would be interesting to you."<br><br>
+      5. Clean exit (day 11): "Leaving it here. Chris Connolly, Infinity Paragliding. If you ever have clients looking for a genuinely challenging experience in Queenstown, or want to try it yourself, easy to reach."
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- PROSPECT 7 -->
+  <div class="pcard warm">
+    <div class="ph">
+      <div class="av-sm">FC</div>
+      <div class="ph-info">
+        <div class="nm">Frederik CORNU</div>
+        <div class="rl">GM APAC · Schneider Electric · Board Director, Watercare</div>
+        <div class="loc">Auckland, New Zealand (French native, NZ permanent resident)</div>
+      </div>
+      <span class="tagi t-amb" style="margin-left:auto">warm</span>
+    </div>
+    <div class="signal">Signal: French native, NZ permanent resident. Passionate about nature and sustainability. Well-traveled across Europe and Asia-Pacific. France produces the world's best paragliding culture. High-income profile, values experiences over possessions, references nature as a core interest. Potential for a Queenstown trip.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 6/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Analytical</span>
+      <span class="score-pill sp-angle">Angle: Student</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"France produces the world's best paragliders. As a Frenchman who's been flying all over the world, have you landed in NZ's air yet?"</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Frederik, as a Frenchman permanently in NZ with a serious interest in nature, I'm curious whether you've explored paragliding here. France has the deepest paragliding culture in the world. I run Infinity Paragliding in Queenstown. Worth connecting.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      France takes paragliding more seriously than almost anywhere. Growing up there and being passionate about nature, do you have any flying background or is it something you've watched from the ground?
+    </div>
+
+    <div class="seq-label">Messages 3 to 5</div>
+    <div class="dm-box" style="color:var(--gray-text);font-size:13px;">
+      3. Value-add (day 3): "The Queenstown region has some of the best flying conditions in the southern hemisphere. Different from the Alps but exceptional in its own way. If you're making it down to the South Island, it's worth building a day around."<br><br>
+      4. Pivot (day 6): "We offer everything from a first tandem flight to a full international IPPI licence. Given your background, I'd guess you'd want the real thing rather than just the experience. Am I right?"<br><br>
+      5. Clean exit (day 11): "I'll leave it there. Chris Connolly, Infinity Paragliding. If you make it to Queenstown and want to fly properly, I'm easy to find."
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- PROSPECT 8 -->
+  <div class="pcard warm">
+    <div class="ph">
+      <div class="av-sm">VK</div>
+      <div class="ph-info">
+        <div class="nm">Victoria Keating</div>
+        <div class="rl">Adventure Travel Specialist</div>
+        <div class="loc">New Zealand</div>
+      </div>
+      <span class="tagi t-amb" style="margin-left:auto">warm</span>
+    </div>
+    <div class="signal">Signal: Every continent, Nepal, Antarctica, Colombia, Botswana. Explicitly frames herself around bucket list adventures. Travel professional who also experiences what she sells. Regularly receives referrals and client praise. Could be a client referral source for international visitors who come through her agency.</div>
+    <div class="score-row">
+      <span class="score-pill sp-fit">Fit: 6/10</span>
+      <span class="score-pill sp-warm">Temp: Warm</span>
+      <span class="score-pill sp-style">Style: Expressive</span>
+      <span class="score-pill sp-partner">Angle: Referral / Personal</span>
+    </div>
+    <div class="hook">Human hook</div>
+    <div class="hook-text">"Antarctica, Nepal, Botswana. But have you flown under a paraglider yet?"</div>
+
+    <div class="seq-label">Message 1 · Connection request</div>
+    <div class="dm-box">
+      <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+      Victoria, every continent including Antarctica is a serious travel biography. I run Infinity Paragliding in Queenstown. If your clients come to NZ looking for something genuinely challenging, worth connecting.
+    </div>
+
+    <div class="seq-label">Message 2 · Icebreaker</div>
+    <div class="dm-box">
+      <div class="dm-num">Icebreaker <span class="dm-tag ib">day 1</span></div>
+      With a list that includes Antarctica and Nepal, I'm curious: have you personally done the paragliding, or is it something you've sent clients to without trying yourself?
+    </div>
+
+    <div class="seq-label">Messages 3 to 5</div>
+    <div class="dm-box" style="color:var(--gray-text);font-size:13px;">
+      3. Value-add (day 3): "We get a lot of international visitors who've done the tandem experience elsewhere and want to go further. The IPPI licence we train to is internationally recognised, so they can continue their flying back home. Worth knowing if you're building NZ itineraries for serious adventure travellers."<br><br>
+      4. Pivot (day 6): "We offer a short intro day at $370 that gives people a real sense of whether they want to pursue it properly. For a travel professional building NZ content, it's worth experiencing firsthand. Would that be useful to you?"<br><br>
+      5. Clean exit (day 11): "Leaving it here, Victoria. Chris Connolly, Infinity Paragliding. If you ever want to experience it or have clients asking about it, info@infinityparagliding.co.nz."
+    </div>
+    <div class="draft-notice">All messages are drafts. Review before sending. Never auto-sent.</div>
+  </div>
+
+  <!-- COLD PROSPECTS -->
+  <div class="sec">Cold prospects</div>
+
+  <div class="grid2">
+    <div class="pcard cold">
+      <div class="ph">
+        <div class="av-sm">NB</div>
+        <div class="ph-info">
+          <div class="nm">Nick Bolton</div>
+          <div class="rl">Co-CEO · Planit (travel planning app)</div>
+          <div class="loc">New Zealand</div>
+        </div>
+        <span class="tagi t-grey" style="margin-left:auto">cold</span>
+      </div>
+      <div class="signal">Signal: Building a travel app focused on personalised recommendations. If Planit surfaces adventure activities in NZ, Infinity Paragliding is a natural fit. Digital partnership angle, not student prospect.</div>
+      <div class="score-row" style="margin-bottom:10px;">
+        <span class="score-pill sp-fit">Fit: 5/10</span>
+        <span class="score-pill sp-cold">Temp: Cold</span>
+        <span class="score-pill sp-partner">Angle: Digital Partnership</span>
+      </div>
+      <div class="dm-box">
+        <div class="dm-num">Connection request <span class="dm-tag cr">send now</span></div>
+        Nick, Planit's focus on personalised travel recommendations is interesting. I run Infinity Paragliding in Queenstown, probably one of the more distinctive things to do in NZ if you're building adventure content. Worth connecting.
+      </div>
+      <div class="draft-notice">Draft only. Never auto-sent.</div>
+    </div>
+
+    <div class="pcard cold">
+      <div class="ph">
+        <div class="av-sm">AG</div>
+        <div class="ph-info">
+          <div class="nm">Andrea Giribone</div>
+          <div class="rl">Role unknown · Queenstown-based</div>
+          <div class="loc">Queenstown, Otago, New Zealand</div>
+        </div>
+        <span class="tagi t-red" style="margin-left:auto">research needed</span>
+      </div>
+      <div class="signal">Signal: Based in Queenstown but no profile data available from the scrape. Geographic fit is strong. Hold until manually reviewed on LinkedIn before outreach.</div>
+      <div class="score-row" style="margin-bottom:10px;">
+        <span class="score-pill sp-cold">Fit: Unknown</span>
+        <span class="score-pill sp-cold">Temp: Cold</span>
+        <span class="score-pill" style="background:#fdecec;color:var(--bad)">No hook yet</span>
+      </div>
+      <div class="dm-box" style="color:var(--gray-text);font-size:13px;font-style:italic;">
+        Manual research required before outreach. Visit their LinkedIn profile, read their role and content, then return to build a specific hook and connection request.
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    Open your highest-signal prospect first: <b>Dave Greenberg.</b> His entire professional world is built around the gap between assumed readiness and demonstrated performance under pressure. That is exactly what go/no-go training produces in a pilot. He will recognise the parallel immediately. The connection request is 295 characters and specific. Send it before anything else today. Every DM here is a draft. You send, after you read it.
+  </div>
+
+  <footer>The brain thinks. The team works. You approve. · <b>Built by Daniel Paul · Purely Personal</b></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  window.addEventListener('load',function(){
+    if(!window.gsap)return; gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.ohead',{y:26,opacity:0,scale:.98,duration:.7,ease:'power3.out'});
+    gsap.from('.ohead h1',{y:14,opacity:0,duration:.7,delay:.12,ease:'power3.out'});
+    gsap.from('.stat',{y:16,opacity:0,duration:.5,stagger:.08,ease:'power2.out',delay:.2});
+    gsap.from('.pcard,.card,.note',{y:20,opacity:0,duration:.55,stagger:.06,ease:'power2.out',scrollTrigger:{trigger:'.doc',start:'top 85%'}});
+    gsap.utils.toArray('.count').forEach(function(el){
+      var to=+el.dataset.to,o={v:0};
+      gsap.to(o,{v:to,duration:1.4,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 92%'},onUpdate:function(){el.textContent=Math.round(o.v);}});
+    });
+  });
+</script>
+</body>
+</html>

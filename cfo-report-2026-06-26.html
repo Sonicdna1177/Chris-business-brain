@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFO Weekly Revenue · 26 June 2026 · Purely Personal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#E8294C; --primary-light:#F5607A;
+    --black:#0A0A0A; --ink:#15151A; --white:#FFFFFF; --off-white:#F8F7F5;
+    --gray:#E4E3E0; --gray-text:#5b5b62; --gray-light:#F2F1EE;
+    --good:#16A34A; --warn:#D97706; --bad:#DC2626;
+    --r-md:14px; --r-lg:22px; --pill:9999px;
+    --sh:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06);
+    --grad:linear-gradient(135deg, color-mix(in srgb,var(--primary) 78%, #000) 0%, var(--primary) 48%, var(--primary-light) 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Rethink Sans',sans-serif;background:radial-gradient(80% 60% at 96% -12%, color-mix(in srgb,var(--primary) 14%, transparent), transparent 60%), radial-gradient(60% 50% at 0% 6%, color-mix(in srgb,var(--primary-light) 10%, transparent), transparent 55%), var(--off-white);background-attachment:fixed;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .doc{max-width:840px;margin:0 auto;padding:34px 22px 70px;}
+
+  .ohead{border-radius:var(--r-md);padding:26px 28px;margin-bottom:22px;color:#fff;background:var(--grad);box-shadow:0 16px 42px color-mix(in srgb,var(--primary) 30%, transparent);position:relative;overflow:hidden;}
+  .ohead::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.10);top:-120px;right:-60px;pointer-events:none;}
+  .ohead .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.82;font-weight:600;}
+  .ohead h1{font-size:clamp(22px,4vw,30px);font-weight:800;letter-spacing:-.02em;margin:5px 0 3px;}
+  .ohead .d{font-size:13px;opacity:.85;}
+
+  .sec{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-text);font-weight:700;margin:24px 0 12px;}
+  .card{background:#fff;border:1px solid var(--gray);border-radius:var(--r-md);box-shadow:var(--sh);padding:18px 20px;margin-bottom:14px;border-left:4px solid var(--primary);}
+  .card h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-text);margin-bottom:12px;}
+  .row{display:flex;align-items:flex-start;gap:10px;padding:9px 0;font-size:14px;border-bottom:1px solid var(--gray-light);}
+  .row:last-child{border-bottom:none;}
+  .row .label{flex:1;line-height:1.5;}
+  .row .val{font-weight:700;white-space:nowrap;font-size:14px;}
+  .tagi{font-size:11px;font-weight:700;padding:2px 9px;border-radius:var(--pill);white-space:nowrap;flex-shrink:0;}
+  .t-red{background:#fdecec;color:var(--bad);}
+  .t-grn{background:#e7f6ee;color:var(--good);}
+  .t-grey{background:var(--gray-light);color:var(--gray-text);}
+  .t-amb{background:#fdf1de;color:var(--warn);}
+  .t-blue{background:#e6f0fc;color:#1E6FE0;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+
+  .stat{background:#fff;border:1px solid var(--gray);border-radius:var(--r-md);box-shadow:var(--sh);padding:18px 20px;position:relative;overflow:hidden;}
+  .stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);}
+  .stat .l{font-size:12px;color:var(--gray-text);margin-bottom:4px;}
+  .stat .n{font-size:30px;font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;}
+  .stat .n.amber{background:none;color:var(--warn);}
+  .stat .n.red{background:none;color:var(--bad);}
+  .stat .n.empty{background:none;color:var(--gray-text);font-size:20px;font-style:italic;}
+  .stat .delta{font-size:12px;font-weight:600;margin-top:4px;}
+  .stat .delta.up{color:var(--good);}
+  .stat .delta.down{color:var(--bad);}
+  .stat .delta.neutral{color:var(--gray-text);}
+
+  .bar{height:14px;border-radius:var(--pill);background:var(--gray-light);overflow:hidden;margin-top:10px;}
+  .bar i{display:block;height:100%;width:0;border-radius:var(--pill);background:linear-gradient(90deg,var(--primary),var(--primary-light));}
+
+  /* Flag cards */
+  .flag{background:#fff;border:1px solid var(--gray);border-radius:var(--r-md);box-shadow:var(--sh);padding:16px 18px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;}
+  .flag.red{border-left:4px solid var(--bad);}
+  .flag.amber{border-left:4px solid var(--warn);}
+  .flag.blue{border-left:4px solid #1E6FE0;}
+  .flag-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+  .flag-body .flag-title{font-weight:700;font-size:14px;margin-bottom:3px;}
+  .flag-body .flag-detail{font-size:13px;color:var(--gray-text);line-height:1.5;}
+
+  /* DM draft box */
+  .dm-draft{background:var(--gray-light);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.7;color:var(--ink);margin-top:10px;}
+  .dm-draft .dm-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:8px;}
+  .dm-draft .dm-notice{font-size:11px;color:var(--gray-text);font-style:italic;margin-top:8px;}
+
+  /* Input fields */
+  .input-field{width:100%;border:1px dashed var(--gray);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:14px;color:var(--gray-text);background:#fff;margin-top:8px;outline:none;}
+  .input-field:focus{border-color:var(--primary);color:var(--ink);}
+
+  .note{background:linear-gradient(135deg, var(--ink) 0%, color-mix(in srgb,var(--primary) 26%, var(--ink)) 100%);color:#fff;border-radius:var(--r-md);padding:18px 22px;font-size:15px;margin-top:6px;box-shadow:0 14px 36px rgba(0,0,0,.16);}
+  .note b{color:var(--primary-light);}
+
+  .context-badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--pill);background:#e6f0fc;color:#1E6FE0;margin-bottom:12px;}
+
+  footer{text-align:center;padding:30px 22px 10px;color:var(--gray-text);font-size:13px;}
+  footer b{color:var(--ink);}
+  @media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-theme="standard">
+<div class="doc">
+
+  <div class="ohead">
+    <div class="k">CFO · Weekly revenue</div>
+    <h1>Week of 23 June 2026</h1>
+    <div class="d">Friday, 26 June 2026 · read only, I never move money</div>
+  </div>
+
+  <div class="context-badge">Winter season · June · Off-peak for instruction. Expenses active, revenue from training not visible in Gmail this week.</div>
+
+  <!-- HEADLINE METRICS -->
+  <div class="grid3">
+    <div class="stat">
+      <div class="l">Confirmed this week</div>
+      <div class="n amber">$870</div>
+      <div class="delta neutral">NZD · gift voucher deposit</div>
+    </div>
+    <div class="stat">
+      <div class="l">Training revenue this week</div>
+      <div class="n empty">Not in Gmail</div>
+      <div class="delta neutral">Confirm below</div>
+    </div>
+    <div class="stat">
+      <div class="l">Expenses due this week</div>
+      <div class="n red">$1,323</div>
+      <div class="delta down">Jason Searle · due 30 Jun</div>
+    </div>
+  </div>
+
+  <!-- REVENUE INPUT -->
+  <div class="card" style="margin-top:14px;">
+    <h4>Training revenue · confirm manually</h4>
+    <div style="font-size:14px;color:var(--gray-text);margin-bottom:4px;">Gmail shows no incoming payment confirmations for courses this week. This may be cash, bank transfer, or booking system revenue not routed through email. Paste what came in below.</div>
+    <input class="input-field" type="text" placeholder="e.g. $370 intro day · $299 tandem · $530 PG1 (add amounts and courses)">
+    <input class="input-field" type="text" placeholder="Monthly target NZD (if you have one, paste it here)" style="margin-top:6px;">
+  </div>
+
+  <!-- PIPELINE -->
+  <div class="card">
+    <h4>Pipeline · upcoming bookings</h4>
+    <div class="row">
+      <div class="label">Levi Heskje · 45-min strategy call today (10am). Outcome may affect revenue pipeline.</div>
+      <span class="tagi t-blue">watch</span>
+    </div>
+    <div class="row">
+      <div class="label">Kerstin (Bivouac) · joint venture discussion pending. No dollar value confirmed.</div>
+      <span class="tagi t-amb">pending</span>
+    </div>
+    <div class="row">
+      <div class="label">No confirmed course bookings visible in Gmail. Add active enquiries below.</div>
+      <span class="tagi t-grey">manual input</span>
+    </div>
+    <input class="input-field" type="text" placeholder="Active bookings or enquiries with estimated value (e.g. 2 x PG1 = $1,060)">
+  </div>
+
+  <!-- INVOICES & EXPENSES -->
+  <div class="sec">What you owe · this week</div>
+
+  <div class="card">
+    <h4>Outgoing · expenses confirmed</h4>
+    <div class="row">
+      <div class="label">Jason Searle · INV-0015 · contractor fee</div>
+      <div class="val">$1,322.50 NZD</div>
+      <span class="tagi t-amb">due 30 Jun</span>
+    </div>
+    <div class="row">
+      <div class="label">Advance.ch · Invoice #262752 · equipment shipment arriving today</div>
+      <div class="val">Amount on invoice</div>
+      <span class="tagi t-blue">check on receipt</span>
+    </div>
+    <div class="row">
+      <div class="label">Advance.ch · Proforma P-15518 · paid 23 June via Wise transfer</div>
+      <div class="val">Paid</div>
+      <span class="tagi t-grn">done</span>
+    </div>
+    <div class="row">
+      <div class="label">Google Workspace · monthly subscription · auto-charged</div>
+      <div class="val">Auto</div>
+      <span class="tagi t-grey">recurring</span>
+    </div>
+  </div>
+
+  <!-- REVENUE RECEIVED -->
+  <div class="sec">What came in</div>
+
+  <div class="card">
+    <h4>Revenue confirmed</h4>
+    <div class="row">
+      <div class="label">Petrouchka Steiner-Grierson · gift voucher for Patrick Gray · bank deposit received ~19 June</div>
+      <div class="val">$870 NZD</div>
+      <span class="tagi t-amb">voucher not issued</span>
+    </div>
+    <div class="row">
+      <div class="label">Training course revenue · not visible in Gmail this week · cash or bank transfer</div>
+      <div class="val">Unknown</div>
+      <span class="tagi t-grey">confirm manually</span>
+    </div>
+  </div>
+
+  <!-- MONTHLY PROGRESS -->
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+      <span style="color:var(--gray-text);">Monthly progress · June 2026 (week 4 of 4)</span>
+      <span style="font-weight:700;color:var(--gray-text);">Target not set</span>
+    </div>
+    <div class="bar"><i data-pct="0%"></i></div>
+    <div style="font-size:12px;color:var(--gray-text);margin-top:8px;">Set your monthly revenue target above to activate this bar. At least $870 NZD confirmed this month from the gift voucher. Training revenue to be added manually.</div>
+  </div>
+
+  <!-- ATTENTION FLAGS -->
+  <div class="sec">3 things that need you</div>
+
+  <div class="flag red">
+    <div class="flag-icon">🔴</div>
+    <div class="flag-body">
+      <div class="flag-title">Gift voucher $870 received · not yet issued · 7 days overdue</div>
+      <div class="flag-detail">Petrouchka deposited $870 on 19 June for a voucher made out to Patrick Gray. She resubmitted the voucher form on 21 June. The money is in your account. The voucher is not in her inbox. This is a liability until it is issued. Draft follow-up below.</div>
+      <div class="dm-draft">
+        <div class="dm-label">Draft message to Petrouchka · copy and send, do not auto-send</div>
+        Hi Petrouchka, the voucher for Patrick Gray is ready. [Attach or link to the voucher here.] Apologies for the delay. If you have any questions, just reply to this email. Chris.
+        <div class="dm-notice">Edit before sending. Attach the actual voucher. Never sent automatically.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flag amber">
+    <div class="flag-icon">🟡</div>
+    <div class="flag-body">
+      <div class="flag-title">Jason Searle · $1,322.50 NZD due in 4 days · 30 June</div>
+      <div class="flag-detail">INV-0015 from Jason (lead instructor and contractor) is due Monday 30 June. Cash needs to be available by end of business Friday or Monday morning. Check your account balance before the weekend.</div>
+    </div>
+  </div>
+
+  <div class="flag blue">
+    <div class="flag-icon">🔵</div>
+    <div class="flag-body">
+      <div class="flag-title">Training revenue this week not captured · manual input needed</div>
+      <div class="flag-detail">Gmail shows no incoming payment confirmations for courses this week. It is mid-winter in Queenstown, so training volume may be reduced. Confirm whether any courses ran this week and paste the revenue into the input field above. If no courses ran, note it as a winter off-season week. Knowing the number matters more than what the number is.</div>
+    </div>
+  </div>
+
+  <!-- CFO PRINCIPLE NOTE -->
+  <div class="note">
+    One revenue action with the biggest impact this week: <b>issue Petrouchka's voucher for Patrick Gray today, before the Levi call.</b> The $870 is already in your account. The liability clears the moment the voucher is sent. It takes five minutes. After that, the Levi call is the next thing that could move the pipeline.
+    <textarea class="input-field" rows="2" placeholder="What else came in this week that isn't in Gmail? Revenue, deposits, payments by bank transfer..." style="margin-top:12px;background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.25);color:#fff;"></textarea>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  window.addEventListener('load',function(){
+    if(!window.gsap)return; gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.ohead',{y:26,opacity:0,scale:.98,duration:.7,ease:'power3.out'});
+    gsap.from('.ohead h1',{y:14,opacity:0,duration:.7,delay:.12,ease:'power3.out'});
+    gsap.from('.stat',{y:16,opacity:0,duration:.5,stagger:.08,ease:'power2.out',delay:.2});
+    gsap.from('.card,.flag,.note',{y:20,opacity:0,duration:.55,stagger:.06,ease:'power2.out',scrollTrigger:{trigger:'.doc',start:'top 85%'}});
+    gsap.utils.toArray('.bar i').forEach(function(el){
+      gsap.to(el,{width:el.dataset.pct||'0%',duration:1.4,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 94%'}});
+    });
+  });
+</script>
+
+<footer style="text-align:center;padding:30px 22px 10px;color:var(--gray-text);font-size:13px;">
+  The brain thinks. The team works. You approve. · <b>Built by Daniel Paul · Purely Personal</b>
+</footer>
+</body>
+</html>
